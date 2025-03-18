@@ -6,6 +6,23 @@
 	<title>Document</title>
 </head>
 <body>
-	GOOD MOOOOOOORNING!
+	<script>
+		let letters = [
+			'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'
+		];
+
+		function randomWordGenerator(numberOfLetters) {
+			let myString = '';
+			for (let i=0; i<numberOfLetters; i++) {
+				let randomLetterIndex = Math.floor(Math.random()*letters.length);
+				let randomLetter = letters[randomLetterIndex];
+				myString = myString + randomLetter;
+			}
+			return myString
+		}
+
+		let randomWord = randomWordGenerator(20);
+		console.log(randomWord)
+	</script>
 </body>
 </html>
